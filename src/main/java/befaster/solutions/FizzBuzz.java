@@ -3,33 +3,10 @@ package befaster.solutions;
 import befaster.runner.SolutionNotImplementedException;
 
 public class FizzBuzz {
-
-    /**public static String fizzBuzz(Integer number) {
-    	boolean threeMultiple = false, fiveMultiple = false;
-    	
-    	if(number % 3 == 0) {
-    		threeMultiple = true;
-    	}
-    	
-    	if(number % 5 == 0) {
-    		fiveMultiple = true;
-    	}
-    	
-    	if(threeMultiple == true && fiveMultiple == true) {
-    		return "fizz buzz";
-    	} else if(threeMultiple == true) {
-    		return "fizz";
-    	} else if(fiveMultiple == true) {
-    		return "buzz";
-    	}
-    	
-    	return Integer.toString(number);
-    }**/
 	
-    
     public static String fizzBuzz(Integer number) {
-    	boolean three = false, five = false;
-    	int numCopy = number;
+    	boolean three = false, five = false, deluxe = false;
+    	int numCopy = number, tmp;
     	
     	if(number % 3 == 0) {
     		three = true;
@@ -58,8 +35,24 @@ public class FizzBuzz {
     		numCopy /= 10;
     	}
     	
+    	numCopy = number;
+    	tmp = numCopy % 10;
     	
-    	if(three == true && five == true) {
+    	while(numCopy > 0) {
+    		if(numCopy % 10 != tmp) {
+    			break;
+    		}
+    		
+    		numCopy /= 10;
+    	}
+    	
+    	if(numCopy == 0 && number > 10) {
+    		deluxe = true;
+    	}
+    		
+    	if(three == true && five == true && deluxe == true) {
+    		return "fizz buzz deluxe";
+    	} else if(three == true && five == true) {
     		return "fizz buzz";
     	} else if(three == true) {
     		return "fizz";
