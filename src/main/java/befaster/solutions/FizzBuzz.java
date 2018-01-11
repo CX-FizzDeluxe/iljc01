@@ -54,6 +54,8 @@ public class FizzBuzz {
     		return "fizz buzz deluxe";
     	} else if(three == true && five == true) {
     		return "fizz buzz";
+    	} else if(deluxe == true) {
+    		return "deluxe";
     	} else if(three == true) {
     		return "fizz";
     	} else if(five == true) {
