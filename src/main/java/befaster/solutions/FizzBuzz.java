@@ -5,16 +5,16 @@ import befaster.runner.SolutionNotImplementedException;
 public class FizzBuzz {
 	
     public static String fizzBuzz(Integer number) {
-    	boolean three = false, five = false, deluxe = false, fake = false;
+    	boolean threeDiv = false, hasThree = false, fiveDiv = false, hasFive = false, three = false, five = false, deluxe = false, fake = false;
     	int numCopy = number, tmp;
     	
     	if(number % 3 == 0) {
-    		three = true;
+    		threeDiv = true;
     	}
     	
     	while(numCopy > 0) {
     		if(numCopy % 10 == 3) {
-    			three = true;
+    			hasThree = true;
     			break;
     		}
     		
@@ -22,44 +22,39 @@ public class FizzBuzz {
     	}
     	
     	if(number % 5 == 0) {
-    		five = true;
+    		fiveDiv = true;
     	}
     	
     	numCopy = number;
     	while(numCopy > 0) {
     		if(numCopy % 10 == 5) {
-    			five = true;
+    			hasFive = true;
     			break;
     		}
     		
     		numCopy /= 10;
     	}
     	
-    	numCopy = number;
-    	tmp = numCopy % 10;
-    	
-    	while(numCopy > 0) {
-    		if(numCopy % 10 != tmp) {
-    			break;
-    		}
-    		
-    		numCopy /= 10;
-    	}
-    	
-    	if(numCopy == 0 && number > 10) {
+    	if((threeDiv == true && hasThree == true) || (fiveDiv == true && hasFive == true)) {
     		deluxe = true;
     	}
     	
+    	if(threeDiv == true && hasThree == true)
+    		three = true;
+    	
+    	if(fiveDiv == true && hasFive == true)
+    		five = true;
+    	
     	if(deluxe == true && number % 2 != 0 && number > 10) {
-    		fake = true;
     		deluxe = false;
+    		fake = true;
     	}
     		
     	if(three == true && five == true && deluxe == true) {
     		return "fizz buzz deluxe";
     	} else if(three == true && five == true && fake == true) {
     		return "fizz buzz fake deluxe";
-    	} else if(three == true && five == true) {
+    	} else if((threeDiv == true || hasThree == true) && (fiveDiv == true || hasFive == true)) {
     		return "fizz buzz";
     	} else if(three == true && deluxe == true) {
     		return "fizz deluxe";
@@ -69,13 +64,9 @@ public class FizzBuzz {
     		return "fizz fake deluxe";
     	} else if(five == true && fake == true) {
     		return "buzz fake deluxe";
-    	} else if(deluxe == true) {
-    		return "deluxe";
-    	} else if(fake == true) {
-    		return "fake deluxe";
-    	} else if(three == true) {
+    	} else if(threeDiv == true || hasThree == true) {
     		return "fizz";
-    	} else if(five == true) {
+    	} else if(fiveDiv == true || hasFive == true) {
     		return "buzz";
     	}
     	
