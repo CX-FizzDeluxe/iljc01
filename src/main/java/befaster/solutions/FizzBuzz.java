@@ -6,22 +6,13 @@ public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
     	boolean threeMultiple = false, fiveMultiple = false;
-    	double numCopy = number;
+    	
+    	if(number % 3 == 0) {
+    		threeMultiple = true;
+    	}
     	
     	if(number % 5 == 0) {
     		fiveMultiple = true;
-    		
-    		while(numCopy % 5 == 0) {
-    			numCopy /= 5;
-    		}
-    	}
-    	
-    	while(numCopy > 0) {
-    		numCopy /= 3;
-    		
-    		if(numCopy == 1 && number != 1) {
-    			threeMultiple = true;
-    		}
     	}
     	
     	if(threeMultiple == true && fiveMultiple == true) {
