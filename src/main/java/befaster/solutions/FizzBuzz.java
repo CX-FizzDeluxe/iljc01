@@ -54,8 +54,6 @@ public class FizzBuzz {
     		return "fizz buzz deluxe";
     	} else if(three == true && five == true && fake == true) {
     		return "fizz buzz fake deluxe";
-    	} else if((threeDiv == true || hasThree == true) && (fiveDiv == true || hasFive == true)) {
-    		return "fizz buzz";
     	} else if(three == true && deluxe == true) {
     		return "fizz deluxe";
     	} else if(five == true && deluxe == true) {
@@ -64,6 +62,8 @@ public class FizzBuzz {
     		return "fizz fake deluxe";
     	} else if(five == true && fake == true) {
     		return "buzz fake deluxe";
+    	} else if((threeDiv == true || hasThree == true) && (fiveDiv == true || hasFive == true)) {
+    		return "fizz buzz";
     	} else if(threeDiv == true || hasThree == true) {
     		return "fizz";
     	} else if(fiveDiv == true || hasFive == true) {
