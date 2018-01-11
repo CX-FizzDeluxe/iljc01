@@ -24,10 +24,10 @@ public class FizzBuzz {
     	}
     	
     	return Integer.toString(number);
-    }
-	**/
+    }**/
+	
     
-    public static String fizz_buzz(Integer number) {
+    public static String fizzBuzz(Integer number) {
     	boolean three = false, five = false;
     	int numCopy = number;
     	
