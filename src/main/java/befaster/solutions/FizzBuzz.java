@@ -50,7 +50,7 @@ public class FizzBuzz {
     		deluxe = true;
     	}
     	
-    	if(number % 2 != 0) {
+    	if(deluxe == true && number % 2 != 0 && number > 10) {
     		fake = true;
     		deluxe = false;
     	}
