@@ -9,9 +9,9 @@ public class FizzTest {
 	
 	@Test
 	public void compute_fizz() {
-		assertThat(FizzBuzz.fizzBuzz(7), equalTo("7"));
-		assertThat(FizzBuzz.fizzBuzz(25), equalTo("buzz"));
-		assertThat(FizzBuzz.fizzBuzz(9), equalTo("fizz"));
+		assertThat(FizzBuzz.fizzBuzz(19), equalTo("19"));
+		assertThat(FizzBuzz.fizzBuzz(250), equalTo("buzz"));
+		assertThat(FizzBuzz.fizzBuzz(36), equalTo("fizz"));
 		assertThat(FizzBuzz.fizzBuzz(225), equalTo("fizz buzz"));
 	}
 

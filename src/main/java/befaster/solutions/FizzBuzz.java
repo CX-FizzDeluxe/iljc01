@@ -8,8 +8,13 @@ public class FizzBuzz {
     	boolean threeMultiple = false, fiveMultiple = false;
     	int numCopy = number;
     	
-    	if(number % 5 == 0)
+    	if(number % 5 == 0) {
     		fiveMultiple = true;
+    		
+    		while(numCopy % 5 == 0) {
+    			numCopy /= 5;
+    		}
+    	}
     	
     	while(numCopy > 0) {
     		numCopy /= 3;
