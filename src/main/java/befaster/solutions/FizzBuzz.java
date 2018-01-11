@@ -6,7 +6,7 @@ public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
     	boolean threeMultiple = false, fiveMultiple = false;
-    	int numCopy = number;
+    	double numCopy = number;
     	
     	if(number % 5 == 0) {
     		fiveMultiple = true;
