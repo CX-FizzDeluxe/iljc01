@@ -5,27 +5,26 @@ import befaster.runner.SolutionNotImplementedException;
 public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
-    	boolean threeDiv = false, fiveDiv = false;
+    	boolean threeMultiple = false, fiveMultiple = false;
     	int numCopy = number;
     	
-    	while(numCopy != 0) {
-    		if(numCopy % 3 == 0) {
-    			numCopy /= 3;
-    			threeDiv = true;
-    		} else if(numCopy % 5 == 0) {
-    			numCopy /= 5;
-    			fiveDiv = true;
-    		}
+    	if(number % 5 == 0)
+    		fiveMultiple = true;
+    	
+    	while(numCopy > 0) {
+    		numCopy /= 3;
     		
-    		if(numCopy == 1 && threeDiv == true && fiveDiv == true) {
-    			return "fizz buzz";
-    		} else if(numCopy == 1 && threeDiv == true) {
-    			return "fizz";
-    		} else if(numCopy == 1 && fiveDiv == true) {
-    			return "buzz";
-    		} else {
-    			break;
+    		if(numCopy == 1 && number != 1) {
+    			threeMultiple = true;
     		}
+    	}
+    	
+    	if(threeMultiple == true && fiveMultiple == true) {
+    		return "fizz buzz";
+    	} else if(threeMultiple == true) {
+    		return "fizz";
+    	} else if(fiveMultiple == true) {
+    		return "buzz";
     	}
     	
     	return Integer.toString(number);
