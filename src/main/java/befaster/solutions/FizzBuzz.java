@@ -9,16 +9,24 @@ public class FizzBuzz {
     	int numCopy = number;
     	
     	while(numCopy/3 == (int) numCopy/3) {
-    		if(numCopy == 1) return "fizz";
+    		if(numCopy == 1) { 
+    			return "fizz";
+    		} else if(numCopy == 0) {
+    			return Integer.toString(number);
+    		}
     	}
     	
     	numCopy = number;
     	while(numCopy/5 == (int) numCopy/5) {
-    		if(numCopy == 1) return "buzz";
+    		if(numCopy == 1) {
+    			return "buzz";
+    		} else if(numCopy == 0) {
+    			return Integer.toString(number);
+    		}
     	}
     	
     	numCopy = number;
-    	while(numCopy != 1) {
+    	while(numCopy != 0) {
     		if(numCopy % 3 == 0) {
     			threeDiv = true;
     			numCopy /= 3;
