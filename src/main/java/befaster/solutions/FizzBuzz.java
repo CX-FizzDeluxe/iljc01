@@ -4,7 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class FizzBuzz {
 
-    public static String fizzBuzz(Integer number) {
+    /**public static String fizzBuzz(Integer number) {
     	boolean threeMultiple = false, fiveMultiple = false;
     	
     	if(number % 3 == 0) {
@@ -25,7 +25,7 @@ public class FizzBuzz {
     	
     	return Integer.toString(number);
     }
-
+	**/
     
     public static String fizz_buzz(Integer number) {
     	boolean three = false, five = false;
