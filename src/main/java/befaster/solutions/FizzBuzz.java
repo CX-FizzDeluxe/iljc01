@@ -45,12 +45,12 @@ public class FizzBuzz {
     	if(fiveDiv == true && hasFive == true)
     		five = true;
     	
-    	if(deluxe == true && number % 2 != 0 && number > 10) {
+    	if(deluxe == true && number % 2 != 0) {
     		deluxe = false;
     		fake = true;
     	}
     		
-    	if(three == true && five == true && deluxe == true) {
+    	if((three == true && (fiveDiv == true || hasFive == true)) || ((threeDiv == true || hasThree == true) && five == true) && deluxe == true) {
     		return "fizz buzz deluxe";
     	} else if(three == true && five == true && fake == true) {
     		return "fizz buzz fake deluxe";

@@ -10,8 +10,8 @@ public class FizzTest {
 	@Test
 	public void compute_fizz() {
 		
-		assertThat(FizzBuzz.fizzBuzz(35532), equalTo("fizz deluxe"));
-		assertThat(FizzBuzz.fizzBuzz(225), equalTo("buzz fake deluxe"));
+		assertThat(FizzBuzz.fizzBuzz(3), equalTo("fizz fake deluxe"));
+		assertThat(FizzBuzz.fizzBuzz(510), equalTo("fizz buzz deluxe"));
 	}
 
 }
