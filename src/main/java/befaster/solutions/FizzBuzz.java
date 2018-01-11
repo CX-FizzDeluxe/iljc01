@@ -9,7 +9,7 @@ public class FizzBuzz {
     	int numCopy = number;
     	
     	while(numCopy/3 == (int) numCopy/3) {
-    		if(numCopy == 1) { 
+    		if(numCopy == 1 && number != 1) { 
     			return "fizz";
     		} else if(numCopy == 0) {
     			return Integer.toString(number);
@@ -18,7 +18,7 @@ public class FizzBuzz {
     	
     	numCopy = number;
     	while(numCopy/5 == (int) numCopy/5) {
-    		if(numCopy == 1) {
+    		if(numCopy == 1 && number != 1) {
     			return "buzz";
     		} else if(numCopy == 0) {
     			return Integer.toString(number);
