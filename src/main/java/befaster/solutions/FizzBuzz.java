@@ -6,7 +6,7 @@ public class FizzBuzz {
 	
     public static String fizzBuzz(Integer number) {
     	boolean threeDiv = false, hasThree = false, fiveDiv = false, hasFive = false, three = false, five = false, deluxe = false, fake = false;
-    	int numCopy = number, tmp;
+    	int numCopy = number;
     	
     	if(number % 3 == 0) {
     		threeDiv = true;
