@@ -26,4 +26,48 @@ public class FizzBuzz {
     	return Integer.toString(number);
     }
 
+    
+    public static String fizz_buzz(Integer number) {
+    	boolean three = false, five = false;
+    	int numCopy = number;
+    	
+    	if(number % 3 == 0) {
+    		three = true;
+    	}
+    	
+    	while(numCopy > 0) {
+    		if(numCopy % 10 == 3) {
+    			three = true;
+    			break;
+    		}
+    		
+    		numCopy /= 10;
+    	}
+    	
+    	if(number % 5 == 0) {
+    		five = true;
+    	}
+    	
+    	numCopy = number;
+    	while(numCopy > 0) {
+    		if(numCopy % 10 == 5) {
+    			five = true;
+    			break;
+    		}
+    		
+    		numCopy /= 10;
+    	}
+    	
+    	
+    	if(three == true && five == true) {
+    		return "fizz buzz";
+    	} else if(three == true) {
+    		return "fizz";
+    	} else if(five == true) {
+    		return "buzz";
+    	}
+    	
+    	return Integer.toString(number);
+    }
+
 }
