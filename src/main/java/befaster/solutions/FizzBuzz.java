@@ -50,9 +50,9 @@ public class FizzBuzz {
     		fake = true;
     	}
     		
-    	if((three == true && (fiveDiv == true || hasFive == true)) || ((threeDiv == true || hasThree == true) && five == true) && deluxe == true) {
+    	if(((three == true && (fiveDiv == true || hasFive == true)) || ((threeDiv == true || hasThree == true) && five == true)) && deluxe == true) {
     		return "fizz buzz deluxe";
-    	} else if((three == true && (fiveDiv == true || hasFive == true)) || ((threeDiv == true || hasThree == true) && five == true) && fake == true) {
+    	} else if(((three == true && (fiveDiv == true || hasFive == true)) || ((threeDiv == true || hasThree == true)) && five == true) && fake == true) {
     		return "fizz buzz fake deluxe";
     	} else if(three == true && deluxe == true) {
     		return "fizz deluxe";
